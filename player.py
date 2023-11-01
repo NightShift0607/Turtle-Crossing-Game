@@ -8,6 +8,7 @@ class Player:
     def __init__(self):
         self.player = Turtle("turtle")
         self.create_player()
+        self.car_speed = 0.2
     
     
     def create_player(self):
@@ -18,3 +19,8 @@ class Player:
     
     def up(self):
         self.player.forward(DIST)
+    
+    
+    def next_level(self):
+        self.player.goto(XCOR,YCOR)
+        self.car_speed *= 0.5
